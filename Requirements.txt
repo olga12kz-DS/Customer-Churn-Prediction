@@ -1,0 +1,39 @@
+# I recommend running the code on Google Colab or another cloud-based Jupyter Notebook environment. 
+# Please use this order for optimal performance as it preserves package version control. 
+
+import pandas as pd
+pd.set_option("display.max.columns", 50)
+
+!pip install scikit-learn==1.2.0
+
+import importlib
+import sklearn
+importlib.reload(sklearn)
+
+import numpy as np
+import xgboost as xgb
+from xgboost import XGBClassifier
+from xgboost import plot_importance
+from xgboost import plot_tree
+import matplotlib
+import matplotlib.pyplot as plt
+import seaborn as sns
+import matplotlib.mlab as mlab
+from matplotlib import figure
+import graphviz
+import os
+import shap
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import confusion_matrix
+from sklearn.metrics import balanced_accuracy_score, roc_auc_score, roc_curve, auc, precision_score, recall_score, f1_score
+from sklearn.model_selection import GridSearchCV
+from sklearn.metrics import ConfusionMatrixDisplay, accuracy_score, roc_curve, precision_score, recall_score, f1_score
+from sklearn.preprocessing import LabelEncoder
+from scipy.stats import pointbiserialr
+import scipy.stats as stats
+import math
+import warnings
+
+# Optional settings:
+warnings.filterwarnings("ignore")
+%matplotlib inline
